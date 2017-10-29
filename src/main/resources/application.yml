@@ -1,0 +1,12 @@
+spring:
+  jpa:
+    show-sql: true
+  datasource:
+    data:
+    - classpath:data-h2.sql
+cxf:
+  jaxrs:
+    component-scan: true
+  swagger:
+    title: Employee Service
+    version: 1.0.0.0

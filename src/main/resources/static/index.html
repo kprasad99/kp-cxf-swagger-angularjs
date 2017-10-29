@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Swagger API</title>
+<link rel="stylesheet" href="/webjars/bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet"
+	href="/webjars/angular-swagger-ui/dist/css/swagger-ui.min.css">
+</head>
+<body ng-app="empApp" ng-controller="empCtrlr">
+
+	<div swagger-ui url="swaggerUrl" input-type="url" input="swaggerUrl"
+		validator-url="false" api-explorer="true"></div>
+
+	<script src="/webjars/angularjs/angular.min.js"></script>
+	<script src="/webjars/angular-sanitize/angular-sanitize.min.js"></script>
+	<script src="/webjars/angular-swagger-ui/dist/scripts/swagger-ui.min.js"></script>
+	
+	<script type="text/javascript" >
+		 angular.module('empApp', ['ngSanitize', 'swaggerUi']).controller('empCtrlr', function($scope){
+			 	$scope.url = $scope.swaggerUrl="/services/swagger.json";
+			 });
+	</script>
+</body>
+</html>
